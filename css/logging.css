@@ -1,0 +1,50 @@
+body{
+  background-color: grey;
+}
+main{
+  display: flex;
+  align-items: stretch;
+}
+h1,h2{
+  text-align: center;
+  width: 100%;
+}
+.inscription{
+  width: 70%;
+  padding: 3rem;
+  text-align: center;
+}
+.inscription .champs .line{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+.inscription .champs .line> input{
+  width: 40%;
+  padding: 1rem;
+}
+.inscription > button{
+  width: 10rem;
+  padding: 1rem;
+}
+.connect{
+  width: 30%;
+  padding: 3rem;
+  text-align: center;
+}
+.connect .champs{
+  padding: 2rem;
+}
+.connect .champs > input{
+  padding: 1rem;
+  width: 90%;
+  margin-bottom: 4rem;
+}
+.connect .champs > input:last-child{
+  margin: 0;
+}
+.connect > button{
+  width: 10rem;
+  padding: 1rem;
+}
