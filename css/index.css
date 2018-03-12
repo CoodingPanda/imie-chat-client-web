@@ -1,0 +1,43 @@
+a {
+  text-decoration: none;
+}
+
+
+/* body du site */
+
+body {
+  background-color: grey;
+}
+h1{
+  color: black;
+  text-align: center;
+}
+.button-inscri{
+  background-color: white;
+  width: 10rem;
+  padding: 2rem 0;
+  position: relative;
+  left: 70%;
+  text-align: center;
+}
+
+.reglement{
+  background-color: white;
+  width: 15rem;
+  position: relative;
+  top: 5rem;
+  left: 80%;
+
+}
+.zone-message{
+  background: white;
+  width: 50rem;
+  height: 35rem;
+  position: relative;
+  text-align: center;
+  bottom: 16rem;
+  left: 28%;
+}
+.zone-texte{
+
+}
