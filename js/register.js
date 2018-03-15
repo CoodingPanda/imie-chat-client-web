@@ -15,6 +15,9 @@ function register() {
         MonInscription.Mail = mail;
         MonInscription.Pseudo = Pseudo;
         MonInscription.Password = MonMdp;
+        var toSend = JSON.stringify(MonInscription);
+        console.log(toSend);
+        alert('go in console');
     }
     else{
         alert('An Error has occured');
@@ -24,4 +27,7 @@ function logging(){
     var MaConnexion = {};
     MaConnexion.Mail = document.getElementById('connectMail').value;
     MaConnexion.Password = document.getElementById('connectPassword').value;
+    var toConnect = JSON.stringify(MaConnexion);
+    console.log(toConnect);
+    alert('go in console');
 }
