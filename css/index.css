@@ -1,17 +1,18 @@
+/* body du site */
+
 a {
   text-decoration: none;
 }
 
-
-/* body du site */
-
 body {
   background-color: grey;
 }
+
 h1{
   color: black;
   text-align: center;
 }
+
 .button-inscri{
   background-color: white;
   width: 10rem;
@@ -20,24 +21,48 @@ h1{
   left: 70%;
   text-align: center;
 }
-
+/* add-ons */
 .reglement{
   background-color: white;
-  width: 15rem;
-  position: relative;
-  top: 5rem;
-  left: 80%;
+  width: 20%;
+
+
 
 }
-.zone-message{
-  background: white;
-  width: 50rem;
-  height: 35rem;
-  position: relative;
-  text-align: center;
-  bottom: 16rem;
-  left: 28%;
+.zone-salons{
+  width: 15%;
+  background-color: white;
 }
-.zone-texte{
+/* cadre du tchat */
+
+
+main{
+  display: flex;
+  margin-top: 5%;
+}
+
+.zone-cadre{
+  background-color: white;
+  width: 70%;
+
+  text-align: center;
+
+}
+
+.zone-chan{
+
+}
+
+.zone-dicussion{
+  height: 100%;
+}
+
+.zone-ligne{
+
+}
+
+.zone-de-texte{
+
+  margin-right: 100%;
 
 }
