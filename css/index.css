@@ -24,7 +24,7 @@ h1{
 /* add-ons */
 .reglement{
   background-color: white;
-  width: 20%;
+  width: 15%;
 
 
 
@@ -34,35 +34,36 @@ h1{
   background-color: white;
 }
 /* cadre du tchat */
-
-
 main{
   display: flex;
+  justify-content: space-around;
   margin-top: 5%;
 }
-
+.center{
+  display: flex;
+}
 .zone-cadre{
   background-color: white;
-  width: 70%;
-
+  width: 60%;
   text-align: center;
 
 }
-
 .zone-chan{
 
 }
-
 .zone-dicussion{
-  height: 100%;
+  width: 80%;
 }
-
 .zone-ligne{
-
+  width: 20%;
 }
-
+.zone-message{
+  height: 20rem;
+}
 .zone-de-texte{
-
-  margin-right: 100%;
-
+  width: 90%;
+}
+.zone-de-texte > input{
+  width: 100%;
+  margin: 0;
 }
