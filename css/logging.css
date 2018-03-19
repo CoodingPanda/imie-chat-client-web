@@ -1,6 +1,8 @@
 body{
   background-color: grey;
   color: blue;
+  padding: 0;
+  margin:0;
 }
 main{
   display: flex;
@@ -9,6 +11,14 @@ main{
 h1,h2{
   text-align: center;
   width: 100%;
+}
+h1{
+    color: white;
+}
+header{
+  background: black;
+  margin: 0;
+  padding: 2rem;
 }
 .inscription{
   width: 70%;

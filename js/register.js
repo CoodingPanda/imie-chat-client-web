@@ -7,7 +7,7 @@ function register() {
     var mail = document.getElementById('Mail').value;
     var mailConfirm = document.getElementById('MailConfirm').value;
     var passwordConfirm = document.getElementById('PasswordConfirm').value;
-    if(Pseudo.length >= 5 && MonMdp.length >= 7 && city != null && name != null && firstName != null && mail != null&& mailConfirm != null && mail === mailConfirm && MonMdp === passwordConfirm){
+    if(Pseudo.length >= 5 && MonMdp.length >= 7 && city !== "" && name !== "" && firstName !== "" && mail !== "" && mailConfirm !== "" && mail === mailConfirm && MonMdp === passwordConfirm){
         var MonInscription = {};
         MonInscription.Name = name;
         MonInscription.FirstName = firstName;
@@ -18,6 +18,7 @@ function register() {
         var toSend = JSON.stringify(MonInscription);
         console.log(toSend);
         alert('go in console');
+        server.send(toSend);
     }
     else{
         alert('An Error has occured');
@@ -27,7 +28,13 @@ function logging(){
     var MaConnexion = {};
     MaConnexion.Mail = document.getElementById('connectMail').value;
     MaConnexion.Password = document.getElementById('connectPassword').value;
-    var toConnect = JSON.stringify(MaConnexion);
-    console.log(toConnect);
+    var toSend = JSON.stringify(MaConnexion);
+    console.log(toSend);
+    alert('go in console');
+    Receve(toSend);
+}
+function Receve(MaReception) {
+    var Translated = JSON.parse(MaReception);
+    console.log(Translated.Mail);
     alert('go in console');
 }
