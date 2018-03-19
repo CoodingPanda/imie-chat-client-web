@@ -1,6 +1,5 @@
 body{
   background-color: grey;
-  color: blue;
   padding: 0;
   margin:0;
 }
@@ -12,8 +11,13 @@ h1,h2{
   text-align: center;
   width: 100%;
 }
-h1{
-    color: white;
+h1,h2,h3{
+  color: white;
+  text-decoration: underline;
+}
+h3{
+  margin: 0 0 1rem 0;
+  text-align: left;
 }
 header{
   background: black;
@@ -31,9 +35,12 @@ header{
   justify-content: space-around;
   padding: 2rem 0;
 }
-.inscription .champs .line> input{
+.inscription .champs .label{
   width: 40%;
+}
+.inscription .champs .label > input{
   padding: 1rem;
+  width: 100%;
 }
 .inscription .form > button{
   width: 10rem;
@@ -47,7 +54,7 @@ header{
 .connect .champs{
   padding: 2rem;
 }
-.connect .champs > input{
+.connect .champs .label> input{
   padding: 1rem;
   width: 90%;
   margin-bottom: 4rem;
@@ -55,7 +62,10 @@ header{
 .connect .champs > input:last-child{
   margin: 0;
 }
-.connect .form > button{
+.connect .form button{
   width: 10rem;
   padding: 1rem;
+}
+.label h3{
+  color: #ffd700;
 }

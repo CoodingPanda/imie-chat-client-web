@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mon chat : login</title>
+  <link rel="stylesheet" href="./css/login.css">
+  <script>var server = new WebSocket("ws://localhost:8083");</script>
+</head>
+<body>
+  <header>
+      <h1>Login</h1>
+  </header>
+  <main>
+    <div class="inscription">
+      <h2>Inscription</h2>
+      <form class="form" method="post">
+        <div class="champs">
+          <div class="line-1 line">
+            <div class="label">
+              <h3>Nom</h3>
+              <input type="text" id="Name" placeholder="Nom">
+            </div>
+            <div class="label">
+              <h3>Prenom</h3>
+              <input type="text" id="FirstName" placeholder="Prenom">
+            </div>
+          </div>
+          <div class="line-2 line">
+            <div class="label">
+              <h3>Pseudo</h3>
+              <input type="text" id="pseudo" placeholder="Pseudo (Min: 5 caractères)">
+            </div>
+            <div class="label">
+              <h3>Ville</h3>
+              <input type="text" id="City" placeholder="Ville">
+            </div>
+          </div>
+          <div class="line-3 line">
+            <div class="label">
+              <h3>Email</h3>
+              <input type="email" id="Mail" placeholder="e-mail">
+            </div>
+            <div class="label">
+              <h3>Email confirm</h3>
+              <input type="email" id="MailConfirm" placeholder="Confirmation de  l'e-mail">
+            </div>
+          </div>
+          <div class="line-4 line">
+            <div class="label">
+              <h3>Mot de Passe</h3>
+              <input type="password" id="Password" placeholder="Mot de passe (Min: 7caractères)">
+            </div>
+            <div class="label">
+              <h3>Mot de Passe confirm</h3>
+              <input type="password" id="PasswordConfirm" placeholder="Confirmation mot de passe">
+            </div>
+          </div>
+        </div>
+        <button type="submit" onclick="register()">Valider</button>
+      </form>
+    </div>
+
+    <div class="connect">
+      <h2>Connexion</h2>
+      <form class="form"  method="post">
+        <div class="champs">
+          <div class="label">
+            <h3>Email</h3>
+            <input type="email" id="connectMail" placeholder="Adresse e-mail">
+          </div>
+          <div class="label">
+            <h3>Mot de Passe</h3>
+            <input type="password" id="connectPassword" placeholder="Mot de passe">
+          </div>
+        </div>
+        <button type="submit" onclick="logging()">Valider</button>
+      </form>
+    </div>
+  </main>
+<script src="js/register.js"></script>
+</body>
+</html>
