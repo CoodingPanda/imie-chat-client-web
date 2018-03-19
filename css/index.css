@@ -6,6 +6,9 @@ a {
 
 body {
   background-color: grey;
+  margin: 0;
+  padding: 0;
+
 }
 
 h1{
@@ -20,6 +23,15 @@ h1{
   position: relative;
   left: 70%;
   text-align: center;
+}
+#contenu {
+  float: left;
+  clear: both;
+  margin: 25px;
+  width: 400px;
+  height: 350px;
+  border: 1px black solid;
+  background: white;
 }
 /* add-ons */
 .reglement{
@@ -43,28 +55,38 @@ main{
 .center{
   display: flex;
 }
-.zone-cadre{
-  background-color: white;
-  width: 60%;
-  text-align: center;
 
-}
-.zone-chan{
-
-}
-.zone-dicussion{
-  width: 80%;
-}
 .zone-ligne{
   width: 20%;
 }
-.zone-message{
-  height: 20rem;
+#contenu {
+  float: left;
+  clear: both;
+  margin: 25px;
+  width: 400px;
+  height: 350px;
+  border: 1px black solid;
 }
-.zone-de-texte{
-  width: 90%;
+textarea {
+  float: left;
+  clear: both;
+  width: 350px;
+  height: 50px;
+  border: 1px black solid;
+  border-radius: 4px;
+  margin: 25px;
+  margin-top: 0px;
+  text-align: left;
 }
-.zone-de-texte > input{
-  width: 100%;
-  margin: 0;
+button {
+  float: left;
+  clear: both;
+  margin: 25px;
+  margin-top: 0px;
+  background: #3498db;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

@@ -9,6 +9,7 @@ function register() {
     var passwordConfirm = document.getElementById('PasswordConfirm').value;
     if(Pseudo.length >= 5 && MonMdp.length >= 7 && city !== "" && name !== "" && firstName !== "" && mail !== "" && mailConfirm !== "" && mail === mailConfirm && MonMdp === passwordConfirm){
         var MonInscription = {};
+        MonInscription.Type = 'Inscription';
         MonInscription.Name = name;
         MonInscription.FirstName = firstName;
         MonInscription.City = city;
@@ -26,6 +27,7 @@ function register() {
 }
 function logging(){
     var MaConnexion = {};
+    MaConnexion.Type = 'Connexion';
     MaConnexion.Mail = document.getElementById('connectMail').value;
     MaConnexion.Password = document.getElementById('connectPassword').value;
     var toSend = JSON.stringify(MaConnexion);
