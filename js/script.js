@@ -1,4 +1,5 @@
 jQuery(function(){
+
   $('#post').submit(function(){
       var message = $('#message').val()
       var fini = message.trim();
@@ -9,6 +10,7 @@ jQuery(function(){
         alert('erreur')
       }
       return false
+  
 
   });
 });
