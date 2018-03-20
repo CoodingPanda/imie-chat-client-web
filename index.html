@@ -5,7 +5,10 @@
   <title>Mon Premier table tchat</title>
   <link rel="stylesheet" href="css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    var server = new WebSocket("ws://localhost:8083");
+  </script>
+
 </head>
 
 <body>
@@ -24,22 +27,26 @@
       <p>Salon 3</p>
     </div>
 
-
-
     <div class="zone-cadre">
 
-
-
+      </div>
 
       <div class="center">
+        <div class="zone-dicussion">
+          <div id="liste-msg" class="zone-message">
+
+          </div>
+
+        </div>
+
         <div id="contenu">
           <div class="afficher"></div>
         </div>
 
-      </div>
+      
       <form method="POST" id="post">
         <textarea placeholder="saisissez votre texte" id="message"></textarea>
-        <button type="submit">Envoyer le message</button>
+        <button type="submit" onclick="messager()">Envoyer le message</button>
       </form>
 
     </div>
@@ -63,23 +70,9 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed neque nunc. Sed pulvinar vehicula ante eu elementum. In tincidunt lorem at metus ullamcorper pellentesque. Nam malesuada suscipit pulvinar. Quisque eleifend, dolor eu aliquam mattis, ex odio dapibus mi, ut venenatis dui leo sit amet velit. Duis condimentum tortor ut rutrum suscipit. Proin volutpat risus magna, in rhoncus arcu pulvinar sed. Sed malesuada erat eget dignissim pellentesque. Aenean vehicula nibh a enim sollicitudin tincidunt.</p>
 </div>
 
-
-
-
 </main>
+<script type="text/javascript" src="js/script.js"></script>
+
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </html>

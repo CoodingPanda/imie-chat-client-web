@@ -1,6 +1,7 @@
 body{
   background-color: grey;
-  color: blue;
+  padding: 0;
+  margin:0;
 }
 main{
   display: flex;
@@ -9,6 +10,20 @@ main{
 h1,h2{
   text-align: center;
   width: 100%;
+  color: #ff4500;
+
+}
+h1,h2,h3{
+  text-decoration: underline;
+}
+h3{
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+header{
+  background: black;
+  margin: 0;
+  padding: 2rem;
 }
 .inscription{
   width: 70%;
@@ -21,9 +36,12 @@ h1,h2{
   justify-content: space-around;
   padding: 2rem 0;
 }
-.inscription .champs .line> input{
+.inscription .champs .label{
   width: 40%;
+}
+.inscription .champs .label > input{
   padding: 1rem;
+  width: 100%;
 }
 .inscription .form > button{
   width: 10rem;
@@ -37,7 +55,7 @@ h1,h2{
 .connect .champs{
   padding: 2rem;
 }
-.connect .champs > input{
+.connect .champs .label> input{
   padding: 1rem;
   width: 90%;
   margin-bottom: 4rem;
@@ -45,7 +63,10 @@ h1,h2{
 .connect .champs > input:last-child{
   margin: 0;
 }
-.connect .form > button{
+.connect .form button{
   width: 10rem;
   padding: 1rem;
+}
+.label h3{
+  color: #ffd700;
 }
