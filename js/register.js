@@ -47,7 +47,7 @@ function login(){
     alert(toReceved);
     if(MaConnexion.Email === toReceved.Email){
         if(MaConnexion.Password === toReceved.Password){
-            alert('j\'arrive ici');
+            alert('I\'m here');
             Session.set(maSession, toReceved);
             alert('I\'m connected');
         }else{
