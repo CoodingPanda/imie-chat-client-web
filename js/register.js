@@ -37,6 +37,7 @@ function register() {
         alert('Error on pseudo')
     }
 }
+
 function login(){
     var MaConnexion = {};
     MaConnexion.Type = 'Connexion';
@@ -48,8 +49,6 @@ function login(){
     if(MaConnexion.Email === toReceved.Email){
         if(MaConnexion.Password === toReceved.Password){
             alert('I\'m here');
-            Session.set(maSession, toReceved);
-            alert('I\'m connected');
         }else{
             alert('Error on Password. Please try again');
         }
@@ -57,6 +56,7 @@ function login(){
         alert('Mail Error');
     }
 }
+
 function Receve(MaReception) {
     var Translated = JSON.parse(MaReception);
     console.log(Translated);
