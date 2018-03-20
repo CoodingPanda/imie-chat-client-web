@@ -1,3 +1,4 @@
+var server = new WebSocket("ws://localhost:8083");
 jQuery(function(){
 
   $('#post').submit(function(){
@@ -10,7 +11,8 @@ jQuery(function(){
         alert('erreur')
       }
       return false
-  
+
+
 
   });
 });
