@@ -11,18 +11,22 @@ function register() {
     if(Pseudo.length >= 5){
         if(MonMdp.length >= 7 && MonMdp === passwordConfirm){
             if(mail === mailConfirm && regex.test(mail)){
-                var MonInscription = {};
-                MonInscription.Type = 'Inscription';
-                MonInscription.Name = name;
-                MonInscription.FirstName = firstName;
-                MonInscription.City = city;
-                MonInscription.Email = mail;
-                MonInscription.Username = Pseudo;
-                MonInscription.Password = MonMdp;
-                var toSend = JSON.stringify(MonInscription);
-                console.log(toSend);
-                alert('go in console');
-                server.send(toSend);
+                if(name && firstName && city) {
+                    var MonInscription = {};
+                    MonInscription.Type = 'Inscription';
+                    MonInscription.Name = name;
+                    MonInscription.FirstName = firstName;
+                    MonInscription.City = city;
+                    MonInscription.Email = mail;
+                    MonInscription.Username = Pseudo;
+                    MonInscription.Password = MonMdp;
+                    var toSend = JSON.stringify(MonInscription);
+                    console.log(toSend);
+                    alert('go in console');
+                    server.send(toSend);
+                }else{
+                    alert('Please try again');
+                }
             }else{
                 alert('Invalid Mail');
             }
@@ -33,30 +37,29 @@ function register() {
         alert('Error on pseudo')
     }
 }
-function logging(){
+
+function login(){
     var MaConnexion = {};
     MaConnexion.Type = 'Connexion';
-    MaConnexion.Mail = document.getElementById('connectMail').value;
+    MaConnexion.Email = document.getElementById('connectMail').value;
     MaConnexion.Password = document.getElementById('connectPassword').value;
     var toSend = JSON.stringify(MaConnexion);
-    console.log(toSend);
-    alert('go in console');
-    var toReceved = toSend;
-    Receve(toReceved);
-    if(MaConnexion.Mail === toReceved.Mail){
+    var toReceved = Receve(toSend);
+    alert(toReceved);
+    if(MaConnexion.Email === toReceved.Email){
         if(MaConnexion.Password === toReceved.Password){
-            session.set(toReceved.Pseudo, toReceved);
-            alert('je suis connecter');
+            alert('I\'m here');
         }else{
             alert('Error on Password. Please try again');
         }
     }else{
-        console.log(toReceved);
         alert('Mail Error');
     }
 }
+
 function Receve(MaReception) {
     var Translated = JSON.parse(MaReception);
-    console.log(Translated.Mail);
+    console.log(Translated);
     alert('go in console');
+    return Translated;
 }
