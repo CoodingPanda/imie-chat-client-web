@@ -37,7 +37,7 @@ function register() {
         alert('Error on pseudo')
     }
 }
-function logging(){
+function login(){
     var MaConnexion = {};
     MaConnexion.Type = 'Connexion';
     MaConnexion.Email = document.getElementById('connectMail').value;
@@ -45,11 +45,11 @@ function logging(){
     var toSend = JSON.stringify(MaConnexion);
     var toReceved = Receve(toSend);
     alert(toReceved);
-    if(MaConnexion.Mail === toReceved.Mail){
+    if(MaConnexion.Email === toReceved.Email){
         if(MaConnexion.Password === toReceved.Password){
             alert('j\'arrive ici');
             Session.set(maSession, toReceved);
-            alert('je suis connecter');
+            alert('I\'m connected');
         }else{
             alert('Error on Password. Please try again');
         }
