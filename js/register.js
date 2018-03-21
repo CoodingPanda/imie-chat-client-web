@@ -43,7 +43,9 @@ function login(){
     MaConnexion.Type = 'Connexion';
     MaConnexion.Email = document.getElementById('connectMail').value;
     MaConnexion.Password = document.getElementById('connectPassword').value;
+    console.log(MaConnexion);
     var toSend = JSON.stringify(MaConnexion);
+    console.log(toSend);
     var toReceved = Receve(toSend);
     alert(toReceved);
     if(MaConnexion.Email === toReceved.Email){
