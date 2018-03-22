@@ -4,5 +4,8 @@ server.onmessage=function(event) {
         case "Message":
             console.log(message.Message);
             break;
+        case "Connexion":
+            console.log("I'm already connected");
+            break;
     }
 };

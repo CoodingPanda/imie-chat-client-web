@@ -26,6 +26,7 @@ function register() {
                     server.send(toSend);
                 }else{
                     alert('Please try again');
+                    return false;
                 }
             }else{
                 alert('Invalid Mail');
@@ -45,23 +46,20 @@ function login(){
     MaConnexion.Password = document.getElementById('connectPassword').value;
     console.log(MaConnexion);
     var toSend = JSON.stringify(MaConnexion);
-    console.log(toSend);
-    var toReceved = Receve(toSend);
-    alert(toReceved);
-    if(MaConnexion.Email === toReceved.Email){
-        if(MaConnexion.Password === toReceved.Password){
-            alert('I\'m here');
-        }else{
+    if(MaConnexion.Email === toReceved.Email) {
+        if (MaConnexion.Password === toReceved.Password) {
+            server.send(toSend);
+            alert('I\'m logged');
+        } else {
             alert('Error on Password. Please try again');
         }
-    }else{
+    }else {
         alert('Mail Error');
     }
 }
 
 function Receve(MaReception) {
     var Translated = JSON.parse(MaReception);
-    console.log(Translated);
     alert('go in console');
     return Translated;
 }
