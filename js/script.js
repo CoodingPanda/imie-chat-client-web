@@ -23,10 +23,16 @@ function afficher(){
 
 
     var Message = document.getElementById('message').value;
+
+    var date = new Date();
+    var heure = date.getHours();
+    var minutes = date.getMinutes();
     if(Message !== ""){
-      document.getElementById('afficher').append(Message, document.createElement("div"));
-      messager();
+      document.getElementById('afficher').append(heure + ":" + minutes + Message, document.createElement('div'));
+      messager(heure, minutes);
+
       document.getElementById('message').value = '';
+
 
       } else {
         alert('erreur');
@@ -36,17 +42,20 @@ function afficher(){
   }
 
 
+
 // Envoie de message au serveur
 
-function messager() {
+function messager(heure, minutes)  {
 
 
     var Message = document.getElementById('message').value;
     if (Message.length <= 600) {
         var MonMessage = {};
         MonMessage.Type = 'Message';
-        MonMessage.Pseudo = 'Michel';
-        MonMessage.Message = Message;
+        MonMessage.Username = '';
+        MonMessage.MessageCapacity = Message;
+        MonMessage.dateHours = heure;
+        MonMessage.dateMinutes = minutes;
         var toSend = JSON.stringify(MonMessage);
         console.log(toSend);
         alert('go in console');
