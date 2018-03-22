@@ -46,7 +46,6 @@ function login(){
     MaConnexion.Password = document.getElementById('connectPassword').value;
     var toSend = JSON.stringify(MaConnexion);
     var toReceved = Receve(toSend);
-
     if(MaConnexion.Email === toReceved.Email) {
         if (MaConnexion.Password === toReceved.Password) {
             server.send(toSend);
