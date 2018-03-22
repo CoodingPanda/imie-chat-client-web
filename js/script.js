@@ -28,7 +28,7 @@ function afficher(){
     var heure = date.getHours();
     var minutes = date.getMinutes();
     if(Message !== ""){
-      document.getElementById('afficher').append(heure + ":" + minutes + Message, document.createElement('div'));
+      document.getElementById('afficher').append("[" + heure + ":" + minutes + "]: " + Message, document.createElement('div'));
       messager(heure, minutes);
 
       document.getElementById('message').value = '';
