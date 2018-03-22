@@ -1,26 +1,47 @@
-jQuery(function(){
+// jQuery(function(){
+//
+//   $('#post').submit(function(){
+//       var message = $('#message').val();
+//       var fini = message.trim();
+//       if(fini !== ""){
+//           $('.afficher').append("<div>"+message+"</div>")
+//           $('#message').val('')
+//       } else {
+//         alert('erreur')
+//       }
+//       return false
+//
+//
+//
+//   });
+// });
 
-  $('#post').submit(function(){
-      var message = $('#message').val();
-      var fini = message.trim();
-      if(fini !== ""){
-          $('.afficher').append("<p>"+message+"</p>")
-          $('#message').val('')
+
+// Affichage de message sur le site
+
+function afficher(){
+
+
+    var Message = document.getElementById('message').value;
+    if(Message != ""){
+      document.getElementById('afficher').append(Message, document.createElement("div"));
+      messager();
+      document.getElementById('message').value = '';
+
       } else {
-        alert('erreur')
+        alert('erreur');
       }
-      return false
+      return false;
+
+  }
 
 
-
-  });
-});
+// Envoie de message au serveur
 
 function messager() {
 
 
-    var Message = document.getElementById('message').value
-    alert('go in console');
+    var Message = document.getElementById('message').value;
     if (Message.length <= 600) {
         var MonMessage = {};
         MonMessage.Type = 'Message';
@@ -30,6 +51,7 @@ function messager() {
         console.log(toSend);
         alert('go in console');
         server.send(toSend);
+
 
 
     } else {

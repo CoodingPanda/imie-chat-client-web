@@ -59,14 +59,6 @@ main{
 .zone-ligne{
   width: 20%;
 }
-#contenu {
-  float: left;
-  clear: both;
-  margin: 25px;
-  width: 400px;
-  height: 350px;
-  border: 1px black solid;
-}
 textarea {
   float: left;
   clear: both;
@@ -89,4 +81,16 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+#contenu {
+  float: left;
+  clear: both;
+  margin: 25px;
+  width: 400px;
+  height: 350px;
+  border: 1px black solid;
+}
+.afficher > div {
+  width: 10%;
+  height: 20%;
 }
