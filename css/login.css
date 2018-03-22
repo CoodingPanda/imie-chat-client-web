@@ -60,7 +60,7 @@ header{
   width: 90%;
   margin-bottom: 4rem;
 }
-.connect .champs > input:last-child{
+.connect .champs .label-2> input:last-child{
   margin: 0;
 }
 .connect .form button{

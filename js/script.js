@@ -23,12 +23,14 @@ function afficher(){
 
 
     var Message = document.getElementById('message').value;
+
     var date = new Date();
     var heure = date.getHours();
     var minutes = date.getMinutes();
     if(Message !== ""){
       document.getElementById('afficher').append(heure + ":" + minutes + Message, document.createElement('div'));
       messager(heure, minutes);
+
       document.getElementById('message').value = '';
 
 

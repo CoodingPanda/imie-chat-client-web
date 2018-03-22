@@ -44,8 +44,9 @@ function login(){
     MaConnexion.Type = 'Connexion';
     MaConnexion.Email = document.getElementById('connectMail').value;
     MaConnexion.Password = document.getElementById('connectPassword').value;
-    console.log(MaConnexion);
     var toSend = JSON.stringify(MaConnexion);
+    var toReceved = Receve(toSend);
+
     if(MaConnexion.Email === toReceved.Email) {
         if (MaConnexion.Password === toReceved.Password) {
             server.send(toSend);
@@ -59,6 +60,7 @@ function login(){
 }
 
 function Receve(MaReception) {
+    alert(MaReception);
     var Translated = JSON.parse(MaReception);
     alert('go in console');
     return Translated;
