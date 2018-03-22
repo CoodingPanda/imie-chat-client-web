@@ -69,6 +69,7 @@ textarea {
   margin: 25px;
   margin-top: 0px;
   text-align: left;
+
 }
 button {
   float: left;
@@ -89,6 +90,7 @@ button {
   width: 400px;
   height: 350px;
   border: 1px black solid;
+  overflow: scroll;
 }
 .afficher > div {
   width: 10%;
