@@ -23,7 +23,7 @@ function afficher(){
 
 
     var Message = document.getElementById('message').value;
-    if(!Message){
+    if(Message !== ""){
       document.getElementById('afficher').append(Message, document.createElement("div"));
       messager();
       document.getElementById('message').value = '';
