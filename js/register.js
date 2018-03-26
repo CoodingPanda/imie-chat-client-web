@@ -26,19 +26,15 @@ function register() {
                     alert('go in console');
                 }else{
                     alert('Please try again');
-                    return false;
                 }
             }else{
                 alert('Invalid Mail');
-                return false;
             }
         }else{
             alert('Invalid Password');
-            return false;
         }
     }else{
         alert('Error on pseudo');
-        return false;
     }
 }
 
