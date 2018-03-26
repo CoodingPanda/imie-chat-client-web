@@ -21,9 +21,7 @@ function register() {
                     MonInscription.Username = Pseudo;
                     MonInscription.Password = MonMdp;
                     var toSend = JSON.stringify(MonInscription);
-                    console.log(toSend);
                     server.send(toSend);
-                    alert('go in console');
                 }else{
                     alert('Please try again');
                 }
@@ -36,9 +34,11 @@ function register() {
     }else{
         alert('Error on pseudo');
     }
+    return false;
 }
 
-function login(){
+document.querySelector("#login").addEventListener("submit", function(e){
+    e.preventDefault();
     var MaConnexion = {};
     MaConnexion.Type = 'Connexion';
     MaConnexion.Email = document.getElementById('connectMail').value;
@@ -47,11 +47,10 @@ function login(){
     if(MaConnexion.Email !== "") {
         if (MaConnexion.Password !== "") {
             server.send(toSend);
-
         } else {
             alert('Error on Password. Please try again');
         }
     }else {
         alert('Mail Error');
     }
-}
+});

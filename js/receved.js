@@ -1,5 +1,7 @@
 server.onmessage = function(event) {
     var message = JSON.parse(event.data);
+    console.log(message);
+    alert('');
     switch (message.type) {
         case "Message":
             console.log(message.Message);
@@ -13,5 +15,6 @@ server.onmessage = function(event) {
         case "ServerMessage":
             console.log("je suis sur le serveur");
             afficher(message.textMsg,message.username);
+            break;
     }
 };
