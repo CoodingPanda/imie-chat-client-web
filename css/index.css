@@ -96,3 +96,6 @@ button {
   width: 10%;
   height: 20%;
 }
+#Redirection:hover{
+    cursor: pointer;
+}

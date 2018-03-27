@@ -1,6 +1,10 @@
 function afficher(message, username) {
     var laDate = new Date();
-    document.getElementById('afficher').append("[" + laDate.getHours() + ":" + laDate.getMinutes() + "]" + "(" + username + ")" + " : " + message, document.createElement("div"));
+    var minutes = laDate.getMinutes();
+    if(minutes < 10){
+        minutes = "0"+minutes;
+    }
+    document.getElementById('afficher').append("[" + laDate.getHours() + ":" + minutes + "]" + "(" + username + ")" + " : " + message, document.createElement("div"));
 }
 
 function envoiMessage(){
