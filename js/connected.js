@@ -9,7 +9,6 @@ if(localStorage.getItem('keysession')){
         window.location = "index.html";
     });
 }else{
-    /*window.location = "login.html";*/
     document.getElementById('leTitre').innerHTML = "Bienvenue sur Tchat";
     document.getElementById('Redirection').innerHTML = "Connection/Inscription";
     document.getElementById("Redirection").addEventListener("click", function(e) {

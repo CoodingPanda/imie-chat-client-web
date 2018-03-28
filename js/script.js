@@ -4,7 +4,7 @@ function afficher(message, username) {
     if(minutes < 10){
         minutes = "0"+minutes;
     }
-    document.getElementById('afficher').append("[" + laDate.getHours() + ":" + minutes + "]" + "(" + username + ")" + " : " + message, document.createElement("div"));
+    document.getElementById('afficher').append("[" + laDate.getHours() + "h" + minutes + "]" + "(" + username + ")" + " : " + message, document.createElement("div"));
 }
 
 function envoiMessage(){
